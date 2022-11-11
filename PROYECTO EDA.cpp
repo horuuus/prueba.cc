@@ -49,6 +49,16 @@ typedef struct Hist_Clin_Paciente *Historial;
 typedef struct disponibilidadcamas *Camas;
 typedef struct farmacia *Medicamentos;
 
+void insertar(Medico &lista, char nombre[], char especialidad[]){
+	Medico nuevo = new (struct medico);
+	strcpy(nuevo -> nombre, nombre);
+	strcpy(nuevo -> especialidad, especialidad);
+	nuevo -> proximo = NULL;
+	nuevo -> sgte = lista;
+	lista = nuevo;
+}
+
+
 int main(){
 	
 	return 0;
